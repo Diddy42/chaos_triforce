@@ -1,5 +1,3 @@
 # chaos_triforce
 
-yeet2
-
-new line
+github page: https://diddy42.github.io/chaos_triforce/
