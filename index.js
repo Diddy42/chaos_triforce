@@ -1,1 +1,3 @@
-alert('AAAAA');
+function clicked_button(){
+    alert('you clicked!');
+}
