@@ -3,3 +3,9 @@
 - UI pi' intuitiva
 
 - spiegazione del chaos game a fianco
+
+- generalizzare a n starting points
+
+- rendere le regole modificabili (es. al posto che andare a meta' tra un punto e l'altro va a un 1/3...)
+
+- mettere che se premi un'altra volta "create starting points" resetta tutto e leva tutti i punti
