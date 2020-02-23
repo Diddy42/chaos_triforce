@@ -2,8 +2,8 @@ var x_points = [];
 var y_points = [];
 
 var p_layout = {
-    //xaxis: {range: [-1, 51]},
-    //yaxis: {range: [-1, 51]}
+    xaxis: {range: [-1, 51]},
+    yaxis: {range: [-1, 51]}
 };
 
 function on_start(){
@@ -34,9 +34,15 @@ function plot_next_point(){
 }
 
 function plot_the_next_n_points(n){
-    for(i = 0; i < n; i++){
+    var i = 0;
+
+    var interval = setInterval(function() {
         plot_next_point();
-    }
+        i = i + 1;
+        if (i == n){
+            clearInterval(interval);
+        }
+    }, 1);
 }
 
 function draw_point(xp, yp){
@@ -45,13 +51,17 @@ function draw_point(xp, yp){
 
     var chart = document.getElementById('chart');
 
-    var data = [{
+    /*var data = [{
         x: x_points,
         y: y_points,
         mode: 'markers'
       }];
 
-    Plotly.newPlot(chart, data, p_layout);
+    Plotly.newPlot(chart, data, p_layout);*/
+
+    Plotly.extendTraces(chart, {
+        x: [[xp]], y: [[yp]]
+      }, [0]);
 }
 
 function draw_n_points(n){
