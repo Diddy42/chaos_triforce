@@ -90,18 +90,10 @@ function draw_n_starting_points(){
     draw_n_points(n);
 }
 
-function generate_starting_points_form(){
+function get_points_from_user(){
     n = document.getElementById("form1").elements[0].value;
 
-    for(i = 0; i < n; i++){
-        var inp = document.createElement("INPUT");
-        inp.setAttribute("type", "number");
-        inp.setAttribute("name", "x");
-
-        inp = document.createElement("INPUT");
-        inp.setAttribute("type", "number");
-        inp.setAttribute("name", "y");
-    }
+    var str = window.prompt("Coordinates:","");
 }
 
 /*function draw_3_points_on_borders(){
