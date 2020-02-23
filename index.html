@@ -1,9 +1,23 @@
+<head>
+  <script src="plotly-latest.min.js"></script>
+  
+  <script src="index.js"></script>
+</head>
+
 <body>
 
-  <h1>Hello</h1>
+  <h1>Chaos game - Sierpiński triangle</h1>
 
-  <button onclick="clicked_button()">name_of_button</button>
+  <button onclick="draw_n_points(3)">Create the 3 starting points (randomly)</button>
+  --->
+  <button onclick="draw_n_points(1)">Choose a random starting point</button>
+  --->
+  <button onclick="plot_next_point()">Draw the next point</button>
+  OR
+  <button onclick="plot_the_next_n_points(500)">Draw the next 500 points</button>
 
-  <script src="index.js"></script>
+  <div id="chart" style="width:800px;height:800px;"></div>
+
+  <script>on_start()</script>
 
 </body>
