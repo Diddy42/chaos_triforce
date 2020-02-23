@@ -1,0 +1,5 @@
+- i 3 punti iniziali e' meglio sceglierli che stanno sui bordi cosi il triangolo e' sicuramente largo
+
+- UI pi' intuitiva
+
+- spiegazione del chaos game a fianco
