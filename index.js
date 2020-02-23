@@ -1,12 +1,14 @@
 var x_points = [];
 var y_points = [];
 
+var chart_size = 50;
+
 var p_layout = {
-    xaxis: {range: [-1, 51]},
-    yaxis: {range: [-1, 51]}
+    xaxis: {range: [-1, chart_size+1]},
+    yaxis: {range: [-1, chart_size+1]}
 };
 
-function on_start(){
+function reset_chart(){
     var chart = document.getElementById('chart');
 
     var data = [{
@@ -16,6 +18,10 @@ function on_start(){
       }];
 
     Plotly.newPlot(chart, data, p_layout);
+}
+
+function on_start(){
+    reset_chart();
 }
 
 function plot_next_point(){
@@ -66,6 +72,18 @@ function draw_point(xp, yp){
 
 function draw_n_points(n){
     for(i = 0; i < n; i++){
-        draw_point(Math.floor(Math.random() * 50), Math.floor(Math.random() * 50));
+        draw_point(Math.floor(Math.random() * chart_size), Math.floor(Math.random() * chart_size));
     }
+}
+
+function draw_n_starting_points(n){
+    reset_chart();
+
+    draw_n_points(n);
+}
+
+function draw_3_points_on_borders(){
+    reset_chart();
+
+    
 }
