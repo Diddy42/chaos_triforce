@@ -18,6 +18,9 @@ function reset_chart(){
       }];
 
     Plotly.newPlot(chart, data, p_layout);
+
+    x_points = [];
+    y_points = [];
 }
 
 function on_start(){
@@ -28,7 +31,9 @@ function plot_next_point(){
     var last_x = x_points[x_points.length - 1];
     var last_y = y_points[y_points.length - 1];
 
-    var r = Math.floor(Math.random() * 3);
+    n_of_starting_points = document.getElementById("form1").elements[0].value;
+
+    var r = Math.floor(Math.random() * n_of_starting_points);
 
     var target_x = x_points[r];
     var target_y = y_points[r];
@@ -68,6 +73,7 @@ function draw_point(xp, yp){
     Plotly.extendTraces(chart, {
         x: [[xp]], y: [[yp]]
       }, [0]);
+
 }
 
 function draw_n_points(n){
@@ -76,14 +82,18 @@ function draw_n_points(n){
     }
 }
 
-function draw_n_starting_points(n){
+function draw_n_starting_points(){
     reset_chart();
+
+    n = document.getElementById("form1").elements[0].value;
 
     draw_n_points(n);
 }
 
-function draw_3_points_on_borders(){
+/*function draw_3_points_on_borders(){
     reset_chart();
 
-    
-}
+    draw_point(0, Math.floor(Math.random() * chart_size));
+    draw_point(50, Math.floor(Math.random() * chart_size));
+    draw_point(Math.floor(Math.random() * chart_size), 50);
+}*/

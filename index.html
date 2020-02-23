@@ -8,7 +8,11 @@
 
   <h1>Chaos game - Sierpiński triangle</h1>
 
-  <button onclick="draw_n_starting_points(3)">Create the 3 starting points (randomly)</button>
+  <form id="form1">
+    n = <input type="number" value=3></input>
+  </form>
+
+  <button onclick="draw_n_starting_points()">Create the n starting points (randomly)</button>
   --->
   <button onclick="draw_n_points(1)">Choose a random starting point</button>
   --->
@@ -16,7 +20,7 @@
   OR
   <button onclick="plot_the_next_n_points(100)">Draw the next 100 points</button>
   OR
-  <button onclick="plot_the_next_n_points(1000)">Draw the next 1000 points</button>
+  <button onclick="plot_the_next_n_points(10000)">Draw the next 10000 points</button>
 
   <div id="chart" style="width:800px;height:800px;"></div>
 
