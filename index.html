@@ -24,17 +24,19 @@
   <div id="chart" style="width:800px;height:800px;"></div>
   <script>on_start()</script>
 
+
   <h1>Additional settings</h1>
   Specify where to put starting points. Format like this (integers only):
   <br>
   x1,y1/x2,y2/x3,y3 ...
   <br>
-  for example (n=3): 1,1/2,3/3,4
+  for example (n=3): 0,0/50,0/25,50
 
   <form id="custom_start">
-    <input type="text"></input>
+    <input type="text" value=0,0/50,0/25,50></input>
   </form>
   <button onclick="custom_start()">Start with these points!</button>
 
+</div>
 
 </body>

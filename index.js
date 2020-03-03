@@ -111,8 +111,8 @@ function custom_start(){
     }
     else {
         for (i = 0; i < n; i++){
-            x = cust_str.split('/')[i][0];
-            y = cust_str.split('/')[i][2];
+            x = parseInt(cust_str.split('/')[i].split(',')[0]);
+            y = parseInt(cust_str.split('/')[i].split(',')[1]);
     
             draw_point(x, y);
         }
