@@ -1,5 +1,1 @@
-- UI pi' intuitiva
-
-- spiegazione del chaos game a fianco
-
 - rendere le regole modificabili (es. al posto che andare a meta' tra un punto e l'altro va a un 1/3...)

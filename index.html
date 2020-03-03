@@ -7,11 +7,7 @@
 <body>
   <h1>Chaos game - Sierpiński triangle</h1>
 
-  <form id="form1">
-    n = <input type="number" value=3></input>
-  </form>
-
-  1. <button onclick="draw_n_starting_points()">Create the n starting points (randomly)</button>
+  1. <button onclick="draw_n_starting_points()">Create the 3 (or n) starting points (randomly)</button>
   <br>
   2. <button onclick="draw_n_points(1)">Choose a random starting point</button>
   <br>
@@ -24,9 +20,21 @@
   <div id="chart" style="width:800px;height:800px;"></div>
   <script>on_start()</script>
 
+  <h1>What's going on?</h1>
+  The base game (with n=3):
+  <br><br>
+  1. Take three starting points in a plane<br>
+  2. Randomly select any point and consider that your current position<br>
+  3. Randomly select any one of the three starting points<br>
+  4. Move half the distance from your current position to the selected point<br>
+  5. Plot the current position<br>
+  6. Repeat from step 3<br>
+  7. After a lot of points a pattern starts to emerge, the Sierpiński triangle (with the 3 starting points as vertexes)<br>
 
-  <h1>Additional settings</h1>
-  Specify where to put starting points. Format like this (integers only):
+  <br><br>
+
+  <h1>Fiddle with the rules</h1>
+  1. Take n = <form id="form1"><input type="number" value=3></input></form> starting points in a plane. Choose them yourself: <br> Format like this (integers only):
   <br>
   x1,y1/x2,y2/x3,y3 ...
   <br>
@@ -35,7 +43,15 @@
   <form id="custom_start">
     <input type="text" value=0,0/50,0/25,50></input>
   </form>
-  <button onclick="custom_start()">Start with these points!</button>
+  <button onclick="custom_start()">Start with these points!</button><br>
+  2. Randomly select any point and consider that your current position<br>
+  3. Randomly select any one of the three starting points<br>
+  4. Move <form id="custom_distance">
+    <input type="number" value=0.5></input>
+  </form> the distance from your current position to the selected point<br>
+  5. Plot the current position<br>
+  6. Repeat from step 3<br>
+  
 
 </div>
 
