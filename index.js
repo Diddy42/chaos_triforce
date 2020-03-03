@@ -96,10 +96,25 @@ function get_points_from_user(){
     var str = window.prompt("Coordinates:","");
 }
 
-/*function draw_3_points_on_borders(){
+function custom_start(){
     reset_chart();
 
-    draw_point(0, Math.floor(Math.random() * chart_size));
-    draw_point(50, Math.floor(Math.random() * chart_size));
-    draw_point(Math.floor(Math.random() * chart_size), 50);
-}*/
+    n = document.getElementById("form1").elements[0].value;
+
+    cust_str = document.getElementById("custom_start").elements[0].value;
+
+    if (cust_str == ''){
+        alert('Error: the number of points entered must be n; instead, it was: 0');
+    }
+    else if (cust_str.split('/').length != n){
+        alert('Error: the number of points entered must be n; instead, it was: ' + cust_str.split('/').length);
+    }
+    else {
+        for (i = 0; i < n; i++){
+            x = cust_str.split('/')[i][0];
+            y = cust_str.split('/')[i][2];
+    
+            draw_point(x, y);
+        }
+    }
+}
