@@ -38,8 +38,10 @@ function plot_next_point(){
     var target_x = x_points[r];
     var target_y = y_points[r];
 
-    var nx = last_x + (target_x - last_x)/2;
-    var ny = last_y + (target_y - last_y)/2;
+    distance = document.getElementById("custom_distance").elements[0].value;
+
+    var nx = last_x + (target_x - last_x)*distance;
+    var ny = last_y + (target_y - last_y)*distance;
 
     draw_point(nx, ny);
 }
